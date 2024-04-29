@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/background-pattern-desktop.svg) no-repeat fixed, hsl(275, 100%, 97%);
+  background-size: contain;
+  font-family: "Work Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  width: min(87%, 600px);
+  margin: 10.5rem 0;
+  padding: 2.475rem 2.5rem 0rem;
+  border-radius: 1rem;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 30px 40px 6px hsla(292, 16%, 49%, 0.15);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+main .header {
+  color: hsl(292, 42%, 14%);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+main .header h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+main .faqs-list {
+  padding: 0.6rem 0 1rem;
+}
+main .faqs-list .accordion {
+  display: grid;
+  grid-template-rows: 0fr;
+  padding: 1.455rem 0;
+  border-bottom: 2px solid hsl(275, 100%, 97%);
+}
+main .faqs-list .accordion:first-child .accordion-header {
+  padding-top: 0;
+}
+main .faqs-list .accordion:last-child {
+  border-bottom: none;
+}
+main .faqs-list .accordion:last-child .accordion-header {
+  padding-bottom: 0;
+}
+main .faqs-list .accordion.active .answer {
+  display: block;
+}
+main .faqs-list .accordion .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+main .faqs-list .accordion .accordion-header .question {
+  padding-right: 1.75rem;
+  font-size: clamp(1rem, 4vw, 1.125rem);
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+}
+main .faqs-list .accordion .accordion-header .question:hover {
+  color: #ad28eb;
+}
+main .faqs-list .accordion .accordion-header .minus-icon,
+main .faqs-list .accordion .accordion-header .plus-icon {
+  display: none;
+}
+main .faqs-list .accordion .accordion-header .minus-icon.active,
+main .faqs-list .accordion .accordion-header .plus-icon.active {
+  display: block;
+}
+main .faqs-list .accordion .answer {
+  padding-top: 1.4rem;
+  display: none;
+  color: hsl(292, 16%, 49%);
+  line-height: 1.5;
+}
+
+@media (max-width: 375px) {
+  body {
+    background: url(../images/background-pattern-mobile.svg) no-repeat fixed, hsl(275, 100%, 97%);
+    background-size: contain;
+  }
+  main {
+    margin: 8.95rem 0;
+    padding: 1.5rem 1.475rem;
+    border-radius: 0.5rem;
+  }
+  main .header img {
+    width: 24px;
+  }
+  main .faqs-list {
+    padding: 0.3rem 0 0.05rem;
+  }
+  main .faqs-list .accordion {
+    padding: 1.2rem 0;
+  }
+  main .faqs-list .accordion:last-child {
+    padding-bottom: 0;
+  }
+  main .faqs-list .accordion .answer {
+    padding-top: 1.5rem;
+    font-size: 0.875rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
